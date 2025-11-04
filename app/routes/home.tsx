@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Button } from "~/components/ui/button";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -18,7 +19,7 @@ export default function Home() {
         <p className="text-xl text-white/90 mb-8">
           React Router v7 + Tailwind CSS + shadcn/ui
         </p>
-        <div className="flex gap-4 justify-center">
+        <div className="flex flex-wrap gap-4 justify-center mb-8">
           <Button asChild variant="outline" size="lg" className="bg-white hover:bg-gray-100">
             <a
               href="https://reactrouter.com"
@@ -45,6 +46,11 @@ export default function Home() {
             >
               shadcn/ui Docs
             </a>
+          </Button>
+        </div>
+        <div>
+          <Button asChild variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
+            <Link to="/about">Learn More →</Link>
           </Button>
         </div>
       </div>
