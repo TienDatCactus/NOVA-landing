@@ -1,123 +1,87 @@
-# NOVA Landing
+# Welcome to React Router!
 
-A modern landing page built with React Router v7 (framework mode), Tailwind CSS, and shadcn/ui.
+A modern, production-ready template for building full-stack React applications using React Router.
 
-![NOVA Landing Page](https://github.com/user-attachments/assets/c459a82d-b6b8-42b8-a8a9-47571ad062eb)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-## 🚀 Tech Stack
+## Features
 
-- **[React Router v7](https://reactrouter.com/)** - Modern framework mode for React applications with built-in routing, server-side rendering, and more
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid UI development
-- **[shadcn/ui](https://ui.shadcn.com/)** - Re-usable components built with Radix UI and Tailwind CSS
-- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
-- **[Vite](https://vitejs.dev/)** - Next-generation frontend tooling
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-## 📦 Getting Started
-
-### Prerequisites
-
-- Node.js 20.x or higher
-- npm 10.x or higher
+## Getting Started
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/TienDatCactus/NOVA-landing.git
-cd NOVA-landing
-```
+Install the dependencies:
 
-2. Install dependencies:
 ```bash
 npm install
 ```
 
 ### Development
 
-Start the development server:
+Start the development server with HMR:
 
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173/`
+Your application will be available at `http://localhost:5173`.
 
-### Build
+## Building for Production
 
-Build for production:
+Create a production build:
 
 ```bash
 npm run build
 ```
 
-### Production Server
+## Deployment
 
-Start the production server:
+### Docker Deployment
 
-```bash
-npm run start
-```
-
-### Type Checking
-
-Run TypeScript type checking:
+To build and run using Docker:
 
 ```bash
-npm run typecheck
+docker build -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
 ```
 
-## 📁 Project Structure
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
 
 ```
-NOVA-landing/
-├── app/
-│   ├── components/        # React components
-│   │   └── ui/           # shadcn/ui components
-│   ├── lib/              # Utility functions
-│   ├── routes/           # Route components
-│   ├── root.tsx          # Root layout component
-│   ├── routes.ts         # Routes configuration
-│   └── tailwind.css      # Tailwind CSS styles with shadcn/ui theme
-├── public/               # Static assets
-├── build/                # Production build output
-├── components.json       # shadcn/ui configuration
-├── postcss.config.js     # PostCSS configuration
-├── react-router.config.ts # React Router configuration
-├── tailwind.config.js    # Tailwind CSS configuration
-├── tsconfig.json         # TypeScript configuration
-├── vite.config.ts        # Vite configuration
-└── package.json          # Project dependencies and scripts
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
 ```
 
-## 🎨 Adding shadcn/ui Components
+## Styling
 
-To add new shadcn/ui components, you can manually create them in `app/components/ui/` following the [shadcn/ui documentation](https://ui.shadcn.com/docs/components).
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
-Example components are available at:
-- Button: `app/components/ui/button.tsx`
+---
 
-## 🔧 Configuration
-
-### React Router v7
-
-The project uses React Router v7 in framework mode, configured in `react-router.config.ts`. Routes are defined in `app/routes.ts`.
-
-### Tailwind CSS
-
-Tailwind configuration is in `tailwind.config.js` with shadcn/ui theme variables included. The CSS file is at `app/tailwind.css`.
-
-### shadcn/ui
-
-shadcn/ui is configured in `components.json` with the following settings:
-- Style: default
-- Base color: slate
-- CSS variables: enabled
-- Components path: `~/components`
-
-## 📝 License
-
-ISC
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+Built with ❤️ using React Router.
